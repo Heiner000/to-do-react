@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyList from './MyList';
 import './index.css';
+import MyList from './MyList';
+import reportWebVitals from './reportWebVitals'
 
-const toDos = ["walk the dog", "wash dishes", "cook dinner", "change oil"]
+const toDos = ["walk dog", "dishes", "cook", "change oil"]
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <MyList theList={toDos} />
+  <React.StrictMode>
+    <MyList theList={toDos} />
+  </React.StrictMode>
 )
+
+reportWebVitals()
